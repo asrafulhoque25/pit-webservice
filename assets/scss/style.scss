@@ -1,0 +1,528 @@
+/**
+ * @Main scss for (Template/Project Name)
+ * @project     - Project Name
+ * @author      - 
+ * @created_by  - kawsar bin siraj
+ * @created_at  - 
+ * @modified_by -
+ */
+
+
+/* fonts import */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+// to use : font-family: 'Poppins', sans-serif;
+/* fonts import -END */
+
+
+
+
+
+
+/* reset, root */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    min-height: 100vh;
+
+    &.is-bg-img {
+        background-image: url(../img/bg-color.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+}
+
+:root {
+    --theme-color: #FFC545;
+    --yellow-light: #FFD475;
+    --white-color: #FFFFFF;
+    --gray-color: #FFF1D6;
+    --dark-color: #040205;
+    --container-width: 1110px;
+}
+
+.container {
+    @media (min-width:1400px) {
+        max-width: var(--container-width);
+        width: 100%;
+    }
+
+    @media (min-width:1200px) and (max-width:1400px) {
+        max-width: 992px;
+        width: 100%;
+    }
+}
+
+/* reset, root - END */
+
+
+
+
+
+
+/* helper , base classes */
+.gray-bg-clr {
+    background-color: var(--gray-color);
+}
+
+.shape {
+    border-top: 5px solid #FFF0CE;
+    border-radius: 20px 20px 5px 5px !important;
+}
+
+.light-bg-clr {
+    background-color: #FFF0CE;
+}
+
+.is-radius {
+    border-radius: 25px;
+}
+
+.is-radius8 {
+    border-radius: 8px;
+}
+
+/* helper , base classes  - END*/
+
+
+
+// pit-web-services
+.pit-wrapper {
+    width: 100%;
+    overflow: hidden;
+    height: 100vh;
+
+    &.is-bg-img {
+        background-image: url(../img/bg-image.png);
+        background-repeat: no-repeat;
+        background-size: 0;
+        background-position: center;
+
+        @media (min-width:1200px) {
+            min-height: 100vh;
+        }
+
+        @media (min-width:992px) {
+            background-size: contain;
+        }
+    }
+
+    .access-panel {
+        button {
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 26px;
+            box-shadow: none !important;
+
+            &:hover {
+                background-color: var(--dark-color);
+                color: var(--white-color);
+            }
+
+            &.active {
+                background-color: var(--dark-color) !important;
+                color: var(--white-color) !important;
+
+                &:hover {
+                    color: #040205 !important;
+                    background-color: #FFF0CE !important;
+                }
+            }
+        }
+    }
+
+    .pit-service-content {
+        .site-title {
+            font-size: 60px;
+            line-height: 1.5;
+
+            @media (max-width:767px) {
+                font-size: 45px;
+            }
+        }
+
+        .subscriber-form {
+            .form-caption {
+                font-size: 20px;
+                font-weight: 500;
+                line-height: 30px;
+            }
+
+            form {
+                max-width: 528px;
+                width: 100%;
+                position: relative;
+
+                input,
+                button {
+                    height: 60px;
+                    box-shadow: none !important;
+
+                    &::placeholder {
+                        color: var(--dark-color);
+                        font-weight: 600;
+                    }
+                }
+
+                button {
+                    font-size: 18px;
+                    font-weight: 600;
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+                    transition: all 0.3s;
+
+                    &:hover {
+                        background-color: var(--dark-color) !important;
+                        color: var(--white-color) !important;
+                    }
+                }
+            }
+        }
+
+        .service-confidence {
+            .list {
+                font-size: 18px;
+                line-height: 1.6;
+            }
+        }
+
+        .addresses-box {
+            background: #FFE19F;
+            transition: all 0.3s;
+            min-height: 170px;
+
+            .addresses-title {
+                font-weight: 600;
+                font-size: 26px;
+                line-height: 44px;
+            }
+
+            &:hover {
+                border-top: 5px solid var(--white-color) !important;
+            }
+        }
+    }
+
+    #nav-pills-sidebar {
+        .cart-btn {
+            box-shadow: none !important;
+            &:hover {
+                color: var(--theme-color) !important;
+                svg path {
+                    fill: var(--theme-color) !important;
+                }
+            }
+        }
+
+        .firmen-title {
+            transition: all 0.3s linear;
+
+            &:hover {
+                background-color: var(--gray-color) !important;
+                color: var(--dark-color) !important;
+            }
+        }
+
+        .firmen-list {
+            ul {
+                li {
+                    font-weight: 600;
+                    font-size: 18px;
+                    line-height: 27px;
+                    transition: all 0.3s linear;
+
+                    &:hover {
+                        color: var(--theme-color) !important;
+                    }
+                }
+            }
+        }
+    }
+
+    .copyright {
+        font-size: 14px;
+
+        .footer-menu {
+            ul {
+                li {
+                    a {
+                        line-height: 26px;
+                        transition: all 0.3s;
+
+                        &:hover {
+                            color: #ff0000 !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// end pit-web-services
+
+
+
+// Responsive css
+@media (max-width:767px) {
+    .list {
+        font-size: 14px !important;
+    }
+
+    button {
+        font-size: 14px !important;
+    }
+
+    .arrow {
+        width: 20px;
+    }
+}
+
+
+
+
+/* css for pit-nav-pills */
+.branche-bg {
+    @media (min-width:1200px) {
+        min-height: calc(100vh);
+    }
+}
+
+#pit-nav-pills {
+    @media (min-width:1200px) {
+        min-height: calc(100vh - 300px);
+    }
+
+    .btn {
+        &:focus {
+            box-shadow: none;
+            outline: none;
+        }
+    }
+
+    .btn-pills {
+        transition: all .3s linear;
+        font-weight: 500;
+        font-size: 20px;
+        color: var(--dark-color);
+        position: relative;
+        @media (min-width: 992px) and (max-width: 1500px){
+            font-size: 16px !important;
+        }
+        @media (max-width: 991px){
+            font-size: 16px !important;
+        }
+
+        &::before {
+            position: absolute;
+            content: "";
+            left: 0;
+            bottom: -18px;
+            width: 0;
+            height: 3px;
+            background-color: var(--dark-color);
+            transition: all 0.3s linear;
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        &.active {
+            background-color: transparent;
+
+            &::before {
+                opacity: 1;
+                visibility: visible;
+                width: 100%;
+            }
+        }
+    }
+
+    .region-widget {
+        font-size: 14px;
+        line-height: 1.2;
+        transition: all .3s linear;
+        font-weight: 500;
+
+        p {
+            transition: all .4s linear;
+        }
+
+        img {
+            filter: grayscale(0);
+            transition: all .3s linear;
+        }
+
+        &:hover {
+            p {
+                color: var(--theme-color) !important;
+            }
+
+            img {
+                filter: grayscale(1);
+                transform: scale(0.9);
+            }
+
+            border-color: var(--theme-color) !important;
+        }
+    }
+
+    .entscheider-checklist {
+        .checklist-checklist-item {
+            &:last-child {
+                border-bottom: 0 !important;
+            }
+        }
+    }
+
+    .pills-content {
+        .tab-content-title {
+            line-height: 1.6;
+            font-size: 38px;
+            @media (max-width: 1500px){
+                font-size: 28px;
+            }
+        }
+
+        .receive-from-us {
+            line-height: 2;
+        }
+
+        .benefits {
+            ul {
+                li {
+                    font-weight: 600;
+                    font-size: 16px;
+                    line-height: 36px;
+                }
+            }
+        }
+    }
+
+    .inner-tab {
+        .btn-dark {
+            color: var(--dark-color) !important;
+
+            &.active {
+                box-shadow: none !important;
+                background-color: var(--dark-color) !important;
+                color: var(--white-color) !important;
+            }
+        }
+
+        .nav-link {
+            &:focus {
+                box-shadow: none !important;
+            }
+        }
+    }
+
+    .branchen-2-content {
+        .sharch-fill {
+            height: 60px;
+        }
+
+        .btn {
+            height: 60px;
+
+            &:hover {
+                background-color: var(--theme-color) !important;
+            }
+        }
+
+        input {
+            box-shadow: none !important;
+        }
+
+        .check-list {
+            .form-check-input:checked {
+                background-color: var(--dark-color);
+                border-color: var(--white-color);
+                cursor: pointer;
+                font-size: 30px;
+            }
+
+            .form-check-input {
+                background-color: var(--dark-color);
+                border-color: var(--white-color);
+                cursor: pointer;
+                font-size: 30px;
+            }
+
+            .form-check {
+                padding-left: 2.5em;
+            }
+        }
+    }
+
+    #pills-4 {
+        .checklist-checklist-item {
+            &:hover{
+                .badge{
+                    background-color: var(--theme-color) !important;
+                    color: #000;
+                }
+            }
+            .badge {
+                min-height: 30px;
+                transition: all 0.3s linear;
+            }
+        }
+    }
+
+    .form-check-input:checked {
+        background-color: var(--dark-color);
+        border-color: var(--white-color);
+        cursor: pointer;
+        font-size: 30px;
+    }
+
+    .form-check-input {
+        background-color: var(--dark-color);
+        border-color: var(--white-color);
+        cursor: pointer;
+        font-size: 30px;
+    }
+
+    .form-check {
+        padding-left: 2.5em;
+    }
+
+    label {
+        line-height: 45px;
+    }
+
+    button {
+        box-shadow: none !important;
+    }
+
+    #pills-5 {
+        .selection-table{
+            background-color: #EBEBEB;
+        }
+        table {
+            tbody {
+                border-bottom: 1px dashed #CBC9C9;
+                border-color: var(--dark-color);
+            }
+        }
+        .form-group{
+            .btn-dark{
+                transition: all 0.3s linear;
+                &:hover{
+                    background-color: var(--theme-color) !important;
+                    color: var(--white-color) !important;
+                    border-color: var(--theme-color) !important;
+                }
+            }
+        }
+    }
+}
+
+/* css for pit-nav-pills - END */
